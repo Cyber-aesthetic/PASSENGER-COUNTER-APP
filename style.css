@@ -1,43 +1,67 @@
 
 body {
-    display: flex;
-    flex-direction:column;
-    flex-basis: auto;
-    align-items:center;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
    
+
+
+.bg-wrapper {
     background-image: url("bus.jpg");
     background-size: cover ;
-
-
-   
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   
-}    
-
-.main {
-   
-    background-color: darkcyan;
- 
-   
-
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    background-position: center;
+  
 }
 
-h1  {
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+    width: 100%;
+    height: 75vh;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+   
+
+    
+
+
+   
+}
+.title {
   
     margin-top: 10px;
     text-shadow: 2px 2px 4px gray;
-    
+    transition: transform 250ms;
+   
 }
 
-h2 {
+.title:hover {
+    transform: translateY(-10px);
+
+}
+    
+
+
+.passenger {
     
     margin-top: 10px;
     margin-bottom: 10px; 
 }
 
 
-h3 {
+#count-el{
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 20px;
@@ -52,19 +76,35 @@ button {
     font-weight: bold;
     width: 100px;
     margin-bottom: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 9px #999;
+   
+}
+
+
+button:active {
+    
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 
 }
+   
+
 
 #increment-btn {
     background: darkred;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 #save-btn {
 
     background: darkgreen;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 #reset-btn {
@@ -77,6 +117,3 @@ button {
 }
 
 
-#decrement-btn {
-    background: brown;
-}
