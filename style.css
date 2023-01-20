@@ -114,6 +114,8 @@ button:active {
 
 #save-el{
     font-weight: bold;
+    text-transform: uppercase;
+    
 }
 
 
